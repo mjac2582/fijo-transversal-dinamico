@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>pe.com.claro</groupId>
+  <artifactId>fijo-transversal-dinamico</artifactId>
+  <version>1.0.1</version>
+  <packaging>pom</packaging>
+  <name>fijo-transversal-dinamico</name>
+  <modules>
+    <module>claro-common</module>
+    <module>claro-rest-api-client</module>
+    <module>claro-rest-api-common</module>
+    <module>fijo-transversal-dinamico-canonical</module>
+    <module>fijo-transversal-dinamico-domain</module>
+<!--     <module>fijo-transversal-dinamico-integration</module> -->
+    <module>fijo-transversal-dinamico-model</module>
+    <module>fijo-transversal-dinamico-resource</module>
+    <module>fijo-transversal-dinamico-integration</module>
+  </modules>
+  
+   <properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<maven.compiler.source>1.8</maven.compiler.source>
+    	<maven.compiler.target>1.8</maven.compiler.target>
+    	<jersey2.version>2.19</jersey2.version>
+		<javaee.api>7.0</javaee.api>
+		<jaxrs.version>2.0.1</jaxrs.version>
+		<com.fasterxml.jackson.core>2.4.2</com.fasterxml.jackson.core>
+		<swagger.jaxrs>1.3.13</swagger.jaxrs>
+		<com.fasterxml.jackson.core>2.4.2</com.fasterxml.jackson.core>
+		<org.hibernate.javax.persistence>1.0.0.Final</org.hibernate.javax.persistence>
+		<org.hibernate>5.1.0.Final</org.hibernate>
+ </properties>
+  
+  <dependencies>
+  
+  <dependency>
+   		<groupId>com.oracle.ojdbc</groupId>
+   		<artifactId>ojdbc8</artifactId>
+   		<version>19.3.0.0</version>
+   	</dependency>
+  
+  <dependency>
+			<groupId>com.wordnik</groupId>
+			<artifactId>swagger-jaxrs_2.10</artifactId>
+			<version>${swagger.jaxrs}</version>
+			<scope>compile</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>jackson-databind</artifactId>
+					<groupId>com.fasterxml.jackson.core</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>${org.hibernate.javax.persistence}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${org.hibernate}</version>
+		</dependency>
+		
+  
+  
+  
+  <dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>${javaee.api}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.13</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.13</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		
+		
+		 <!-- JAX-RS -->
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>${jaxrs.version}</version>
+        </dependency>
+        <!-- Jersey 2.19 -->
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-multipart</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+        
+ 
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>net.sf.json-lib</groupId>
+		    <artifactId>json-lib</artifactId>
+		    <version>2.4</version>
+		</dependency>		
+		
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${com.fasterxml.jackson.core}</version>
+		</dependency>
+		
+
+		<dependency>
+		    <groupId>commons-configuration</groupId>
+		    <artifactId>commons-configuration</artifactId>
+		    <version>1.6</version>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.3.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>4.3.6.RELEASE</version>
+		</dependency>
+		
+		<dependency>
+		   <groupId>org.springframework</groupId>
+		   <artifactId>spring-context</artifactId>
+		   <version>4.3.6.RELEASE</version>
+		   <scope>compile</scope>
+		</dependency>
+  </dependencies>
+  
+  
+</project>

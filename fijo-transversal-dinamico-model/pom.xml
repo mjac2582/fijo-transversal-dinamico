@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+    <artifactId>fijo-transversal-dinamico</artifactId>
+    <groupId>pe.com.claro</groupId>
+    <version>1.0.1</version>
+  </parent>
+
+	<artifactId>fijo-transversal-dinamico-model</artifactId>
+
+	<packaging>jar</packaging>
+
+	<name>fijo-transversal-dinamico-model</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<claro.rest.api.client>1.0.1</claro.rest.api.client>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	
+	
+	<dependencies>
+	
+	 <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <version>2.6.4</version>
+        </dependency>
+        
+         <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>javax.persistence</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>4.2.8.Final</version>
+        </dependency>
+	
+		<dependency>
+			<groupId>pe.com.claro</groupId>
+			<artifactId>claro-rest-api-client</artifactId>
+			<version>${claro.rest.api.client}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>pe.com.claro</groupId>
+			<artifactId>fijo-transversal-dinamico-canonical</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		
+	</dependencies>
+	
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
